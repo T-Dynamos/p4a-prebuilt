@@ -22,7 +22,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv
+source.exclude_dirs = p4a
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,  pydantic-core, kiwisolver, cryptography, pandas, matplotlib, numpy, pyreqwest_impersonate, uvloop, Pillow
+requirements = python3,  pydantic-core, kiwisolver, cryptography, pandas, matplotlib, numpy, pyreqwest_impersonate, uvloop, Pillow, typing_extensions, ffpyplayer, sqlalchemy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -104,7 +104,7 @@ fullscreen = 0
 android.api = 34
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 21
+android.minapi = 24
 
 # (int) Android SDK version to use
 #android.sdk = 20
@@ -321,13 +321,13 @@ android.allow_backup = True
 #p4a.fork = kivy
 
 # (str) python-for-android branch to use, defaults to master
-# p4a.branch = develop
+p4a.branch = develop
 
 # (str) python-for-android specific commit to use, defaults to HEAD, must be within p4a.branch
 #p4a.commit = HEAD
 
 # (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
-p4a.source_dir = p4a
+#p4a.source_dir = p4a
 
 # (str) The directory in which python-for-android should look for your own build recipes (if any)
 #p4a.local_recipes =
